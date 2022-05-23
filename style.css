@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+p{
+  width: 50rem;
+  height: 50rem;
+  border: 1px solid black;
+  padding: 3rem;
+  display: block;
+}

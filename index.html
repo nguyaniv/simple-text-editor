@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my text editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="onInit()">
+    <div class="container">
+      <h1>My text editor</h1>
+
+      <div class="actions">
+        <button onclick="bold()"><strong>B</strong></button>
+        <button onclick="italic()"><i>i</i></button>
+        <select onchange="changeHeader(value)">
+          <option value="">header</option>
+          <option value="h1">h1</option>
+          <option value="h2">h2</option>
+          <option value="h3">h3</option>
+          <option value="h4">h4</option>
+        </select>
+
+        <input type="color" onchange="changeColor(this.value)" />
+        <button onclick="clean()">clean</button>
+      </div>
+      <p onkeypress="saveText()" contenteditable="true"></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
