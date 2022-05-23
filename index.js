@@ -41,7 +41,7 @@ function changeColor(color) {
   const { element, selectionContents, range } = createRange('span');
 
   element.style.color = color;
-  span.appendChild(selectionContents);
+  element.appendChild(selectionContents);
   range.insertNode(element);
   saveText();
 }
