@@ -36,10 +36,21 @@ function italic() {
   newRange.insertNode(span);
   return span;
 }
+function getStorageData() {
+  const storageData = JSON.parse(localStorage.getItem('userTextData'));
+  if (!storageData) return '';
+  return storageData;
+}
+
+function setStorageData(textBox) {
+  localStorage.setItem('userTextData', JSON.stringify(textBox.innerHTML));
+}
 
 module.exports = {
   italic,
   changeColor,
   changeHeader,
   range,
+  setStorageData,
+  getStorageData,
 };
